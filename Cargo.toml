@@ -7,4 +7,8 @@ edition = "2021"
 name = "two_sum"
 path = "src/leetcode/two_sum.rs"
 
+[[bin]]
+name = "palindrome"
+path = "src/leetcode/palindrome.rs"
+
 [dependencies]
