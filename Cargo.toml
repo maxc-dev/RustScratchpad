@@ -5,11 +5,11 @@ edition = "2021"
 
 [[bin]]
 name = "two_sum"
-path = "src/leetcode/two_sum.rs"
+path = "src/leetcode/1_two_sum.rs"
 
 [[bin]]
 name = "palindrome"
-path = "src/leetcode/palindrome.rs"
+path = "src/leetcode/9_palindrome.rs"
 
 [[bin]]
 name = "118_pascals_triangle"
