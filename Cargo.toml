@@ -11,4 +11,8 @@ path = "src/leetcode/two_sum.rs"
 name = "palindrome"
 path = "src/leetcode/palindrome.rs"
 
+[[bin]]
+name = "118_pascals_triangle"
+path = "src/leetcode/118_pascals_triangle.rs"
+
 [dependencies]
