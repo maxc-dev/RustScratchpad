@@ -19,4 +19,8 @@ path = "src/leetcode/118_pascals_triangle.rs"
 name = "longest_common_prefix"
 path = "src/leetcode/14_longest_common_prefix.rs"
 
+[[bin]]
+name = "valid_parentheses"
+path = "src/leetcode/20_valid_parentheses.rs"
+
 [dependencies]
