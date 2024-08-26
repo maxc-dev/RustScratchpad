@@ -12,7 +12,11 @@ name = "palindrome"
 path = "src/leetcode/9_palindrome.rs"
 
 [[bin]]
-name = "118_pascals_triangle"
+name = "pascals_triangle"
 path = "src/leetcode/118_pascals_triangle.rs"
+
+[[bin]]
+name = "longest_common_prefix"
+path = "src/leetcode/14_longest_common_prefix.rs"
 
 [dependencies]
