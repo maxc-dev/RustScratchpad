@@ -23,4 +23,8 @@ path = "src/leetcode/14_longest_common_prefix.rs"
 name = "valid_parentheses"
 path = "src/leetcode/20_valid_parentheses.rs"
 
+[[bin]]
+name = "58_length_of_last_word"
+path = "src/leetcode/58_length_of_last_word.rs"
+
 [dependencies]
