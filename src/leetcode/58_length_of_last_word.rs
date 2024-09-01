@@ -4,16 +4,12 @@ fn main() {
 }
 
 pub fn length_of_last_word(s: String) -> i32 {
-    let str = &s;
     let mut check = false;
     let mut count = 0;
-    for c in str.chars().rev() {
-        if c == ' ' && check {
-            return count
-        }
-        if c.is_alphanumeric() {
-            check = true;
-            count += 1;
+    for c in s.chars().rev() {
+        match c {
+            ' ' => { if check { return count; } }
+            _ => { check = true; count += 1; }
         }
     }
     count
@@ -56,6 +52,11 @@ mod tests {
     #[test]
     fn test_multiple_spaces_between_words() {
         assert_eq!(length_of_last_word("hello   world".to_string()), 5);
+    }
+
+    #[test]
+    fn test_special_characters() {
+        assert_eq!(length_of_last_word("hello world!".to_string()), 6);
     }
 
     #[test]
