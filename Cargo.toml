@@ -27,4 +27,8 @@ path = "src/leetcode/20_valid_parentheses.rs"
 name = "58_length_of_last_word"
 path = "src/leetcode/58_length_of_last_word.rs"
 
+[[bin]]
+name = "66_plus_one"
+path = "src/leetcode/66_plus_one.rs"
+
 [dependencies]
