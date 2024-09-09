@@ -24,11 +24,15 @@ name = "valid_parentheses"
 path = "src/leetcode/20_valid_parentheses.rs"
 
 [[bin]]
-name = "58_length_of_last_word"
+name = "length_of_last_word"
 path = "src/leetcode/58_length_of_last_word.rs"
 
 [[bin]]
-name = "66_plus_one"
+name = "plus_one"
 path = "src/leetcode/66_plus_one.rs"
+
+[[bin]]
+name = "climbing_stairs"
+path = "src/leetcode/70_climbing_stairs.rs"
 
 [dependencies]
