@@ -39,4 +39,8 @@ path = "src/leetcode/70_climbing_stairs.rs"
 name = "best_time_buy_sell_stock"
 path = "src/leetcode/121_best_time_buy_sell_stock.rs"
 
+[[bin]]
+name = "valid_palindrome"
+path = "src/leetcode/125_valid_palindrome.rs"
+
 [dependencies]
