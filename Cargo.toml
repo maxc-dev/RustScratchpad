@@ -43,4 +43,8 @@ path = "src/leetcode/121_best_time_buy_sell_stock.rs"
 name = "valid_palindrome"
 path = "src/leetcode/125_valid_palindrome.rs"
 
+[[bin]]
+name = "majority_element"
+path = "src/leetcode/169_majority_element.rs"
+
 [dependencies]
