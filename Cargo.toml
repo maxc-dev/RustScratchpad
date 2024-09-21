@@ -51,4 +51,8 @@ path = "src/leetcode/169_majority_element.rs"
 name = "jewels_and_stones"
 path = "src/leetcode/771_jewels_and_stones.rs"
 
+[[bin]]
+name = "richest_customer_wealth"
+path = "src/leetcode/1672_richest_customer_wealth.rs"
+
 [dependencies]
