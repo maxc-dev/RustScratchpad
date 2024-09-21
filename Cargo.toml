@@ -47,4 +47,8 @@ path = "src/leetcode/125_valid_palindrome.rs"
 name = "majority_element"
 path = "src/leetcode/169_majority_element.rs"
 
+[[bin]]
+name = "jewels_and_stones"
+path = "src/leetcode/771_jewels_and_stones.rs"
+
 [dependencies]
