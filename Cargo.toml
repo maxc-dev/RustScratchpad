@@ -55,4 +55,8 @@ path = "src/leetcode/771_jewels_and_stones.rs"
 name = "richest_customer_wealth"
 path = "src/leetcode/1672_richest_customer_wealth.rs"
 
+[[bin]]
+name = "number_of_good_pairs"
+path = "src/leetcode/1512_number_of_good_pairs.rs"
+
 [dependencies]
