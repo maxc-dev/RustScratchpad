@@ -59,4 +59,8 @@ path = "src/leetcode/1672_richest_customer_wealth.rs"
 name = "number_of_good_pairs"
 path = "src/leetcode/1512_number_of_good_pairs.rs"
 
+[[bin]]
+name = "concurrency"
+path = "src/practice/concurrency.rs"
+
 [dependencies]
