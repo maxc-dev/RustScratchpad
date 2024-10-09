@@ -63,4 +63,8 @@ path = "src/leetcode/1512_number_of_good_pairs.rs"
 name = "concurrency"
 path = "src/practice/concurrency.rs"
 
+[[bin]]
+name = "message_passing"
+path = "src/practice/message_passing.rs"
+
 [dependencies]
