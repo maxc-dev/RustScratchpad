@@ -67,4 +67,8 @@ path = "src/practice/concurrency.rs"
 name = "message_passing"
 path = "src/practice/message_passing.rs"
 
+[[bin]]
+name = "sharing_state"
+path = "src/practice/sharing_state.rs"
+
 [dependencies]
