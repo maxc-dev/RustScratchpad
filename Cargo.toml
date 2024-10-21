@@ -75,4 +75,8 @@ path = "src/practice/sharing_state.rs"
 name = "structs_traits"
 path = "src/practice/structs_traits.rs"
 
+[[bin]]
+name = "generic_traits"
+path = "src/practice/generic_traits.rs"
+
 [dependencies]
