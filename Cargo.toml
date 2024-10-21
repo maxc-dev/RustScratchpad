@@ -71,4 +71,8 @@ path = "src/practice/message_passing.rs"
 name = "sharing_state"
 path = "src/practice/sharing_state.rs"
 
+[[bin]]
+name = "structs_traits"
+path = "src/practice/structs_traits.rs"
+
 [dependencies]
