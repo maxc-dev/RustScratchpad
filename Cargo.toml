@@ -79,4 +79,9 @@ path = "src/practice/structs_traits.rs"
 name = "generic_traits"
 path = "src/practice/generic_traits.rs"
 
+[[bin]]
+name = "crossbeam_controller"
+path = "src/crossbeam/controller.rs"
+
 [dependencies]
+crossbeam = "0.8"
