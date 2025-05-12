@@ -40,6 +40,10 @@ name = "best_time_buy_sell_stock"
 path = "src/leetcode/121_best_time_buy_sell_stock.rs"
 
 [[bin]]
+name = "best_time_buy_sell_stock_2"
+path = "src/leetcode/122_best_time_buy_sell_stock_2.rs"
+
+[[bin]]
 name = "valid_palindrome"
 path = "src/leetcode/125_valid_palindrome.rs"
 
