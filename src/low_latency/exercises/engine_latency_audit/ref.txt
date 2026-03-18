@@ -1,0 +1,48 @@
+
+
+
+Latency Bombs
+
+1.  Atomics on hot path
+    - Emits a lock xadd which serialises the pipeline and drains the store buffer
+    - u64 is better, atomics should only be used at publication boundaries
+        - No concurrent readers
+        - No concurrent writers
+        - No cross-thread visibility requirement
+        - The engine runs on a dedicated core
+
+2. Returning the same order with one field modification
+    - Does not make sense to create a new Order when we return the same thing with one field modification
+    - This creates extra stores putting unneeded pressure on the Store Buffer Table
+    - If adjusted_price is the only difference, return this and notice a small drop in mean latency
+
+3. order.qty > 1_000_000 is rare
+    - Rare rejects trigger mispredicts, pipeline flush, atomic increment, early return
+    - Will spike p99
+    - Improved layout is a fast path straight line with an isolated cold path
+
+4. Engine struct representation
+    - Two atomics on the same cache line - processed and risk_rejects
+    - This inflates mean latency heavily even if risk_rejects is only touched 0.1%
+
+
+original:
+Elapsed: 112.5387ms
+Throughput: 177.72 M ops/sec
+
+using u64 instead of atomics
+Elapsed: 35.3336ms
+Throughput: 566.03 M ops/sec
+
+Using &mut order instead of Order
+Elapsed: 60.2616ms
+Throughput: 331.89 M ops/sec
+
+Not expected, but in this case
+- Order is so small (32B)
+- Just stack/cache movements
+- Can easily optimise
+- &mut Order means the compiler thinks Order is externally visible
+    - Therefore it cannot optimise as well
+
+

@@ -1,0 +1,52 @@
+LOW LATENCY OMS – LATENCY BOMBS AUDIT (SINGLE-THREADED)
+
+Observed Throughput: ~2.5M ops/sec (very poor)
+
+Key Structural Issues:
+
+Heap Allocation on Hot Path
+    String for symbol allocated per New.
+    format!() allocates per audit entry.
+    Causes allocator contention, cache pollution, tail spikes.
+    Fix: use symbol IDs or &'static str; no formatting on hot path.
+
+Audit Logging in Hot Path
+    format!() + push into growing Vec<String>.
+    Heavy allocation + integer formatting cost.
+    Hurts both mean and tail latency.
+    Fix: structured logging, preallocated ring buffer, or off-core logging.
+
+Unbounded HashMap
+    No capacity reservation → repeated reallocation + rehash.
+    Non-deterministic latency.
+    Pointer chasing hurts cache locality.
+    Fix: preallocate, fixed-capacity table, or arena-backed structure.
+
+Poor Cache Locality
+    HashMap scatters memory.
+    Each lookup touches multiple cache lines.
+    Arena-backed contiguous storage is superior.
+
+Dynamic Memory Growth (Vec, HashMap)
+    Reallocations cause stop-the-world copies.
+    Tail latency spikes.
+    Fix: fixed capacity, no growth in steady state.
+
+Large Value Movement via Command Enum
+    Order constructed → moved into enum → moved into handler.
+    Extra copies and stack pressure.
+    Fix: decode directly into storage or use lightweight message structs.
+
+
+Removing audit from hot path and instead returning an enum:
+Elapsed: 322.7921ms
+Throughput: 46.47 M ops/sec
+
+full refactor
+Elapsed: 112.7494ms
+Throughput: 133.04 M ops/sec
+
+
+
+
+

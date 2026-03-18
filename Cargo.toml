@@ -87,5 +87,54 @@ path = "src/practice/generic_traits.rs"
 name = "crossbeam_controller"
 path = "src/crossbeam/controller.rs"
 
+[[bin]]
+name = "ll_stack_vs_heap"
+path = "src/low_latency/exercises/stack_vs_heap_in_hot_loop.rs"
+
+[[bin]]
+name = "ll_cache_lines_atomics"
+path = "src/low_latency/exercises/cache_lines_false_sharing_atomics_foundational.rs"
+
+[[bin]]
+name = "ll_cache_lines"
+path = "src/low_latency/exercises/cache_lines_false_sharing_foundational.rs"
+
+[[bin]]
+name = "ll_branch_pred_data_bias"
+path = "src/low_latency/exercises/branch_prediction_data_bias.rs"
+
+[[bin]]
+name = "ll_spsc_bounded_rb"
+path = "src/low_latency/exercises/spsc_bounded_ring_buffer.rs"
+
+[[bin]]
+name = "ll_hidden_latency_bombs_audit_original"
+path = "src/low_latency/exercises/engine_latency_audit/engine_original.rs"
+
+[[bin]]
+name = "ll_hidden_latency_bombs_audit_refactored"
+path = "src/low_latency/exercises/engine_latency_audit/engine_refactored.rs"
+
+[[bin]]
+name = "ll_fixed_cap_arena_allocator_single"
+path = "src/low_latency/exercises/fixed_capacity_arena_allocator_single_threaded.rs"
+
+[[bin]]
+name = "ll_intrusive_doubly_linked_list_arena"
+path = "src/low_latency/exercises/intrusive_doubly_linked_list_arena.rs"
+
+[[bin]]
+name = "ll_oms_latency_audit"
+path = "src/low_latency/exercises/oms_latency_audit/oms_original.rs"
+
+[[bin]]
+name = "ll_oms_latency_audit_refactor"
+path = "src/low_latency/exercises/oms_latency_audit/oms_refactored.rs"
+
+[[bin]]
+name = "ll_order_book_exercise"
+path = "src/low_latency/exercises/order_book_impl/order_book.rs"
+
 [dependencies]
 crossbeam = "0.8"
+windows-sys = { version = "0.52", features = ["Win32_System_Threading", "Win32_Foundation"] }
