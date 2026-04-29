@@ -32,10 +32,6 @@ name = "plus_one"
 path = "src/leetcode/66_plus_one.rs"
 
 [[bin]]
-name = "climbing_stairs"
-path = "src/leetcode/70_climbing_stairs.rs"
-
-[[bin]]
 name = "best_time_buy_sell_stock"
 path = "src/leetcode/121_best_time_buy_sell_stock.rs"
 
